@@ -52,9 +52,24 @@ public class Outils {
 				lC.add(c);							//	lC 
 			}
 		}
+		lC = permutationAleatoireNombres(lC);
 		return lC;
 	}
 	
+	private List<Combinaisons> permutationAleatoireNombres(List<Combinaisons> lC) {
+		
+		for(int i = 0 ; i <lC.size() ; i++) {
+			double j = Math.random();
+			System.out.println(j);
+			if(1 == (int) Math.random() * 2) {
+				int tempo = lC.get(i).getNbr1();
+				lC.get(i).setNbr1(lC.get(i).getNbr2());
+				lC.get(i).setNbr2(tempo);
+			}
+		}
+		return lC;
+	}
+
 	public static int getNbr1() {
 		return nbr1;
 	}
@@ -63,4 +78,3 @@ public class Outils {
 		return nbr2;
 	}
 }
-
