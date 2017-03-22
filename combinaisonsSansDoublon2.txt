@@ -1,0 +1,121 @@
+combinaison : (0, 0)						0 doublon
+combinaison : (0, 1)						1 doublon A0			v
+combinaison : (0, 2)						1 doublon B0			v
+combinaison : (0, 3)						1 doublon C0			v
+combinaison : (0, 4)						1 doublon D0			v
+combinaison : (0, 5)						1 doublon E0			v
+combinaison : (0, 6)						1 doublon F0			v
+combinaison : (0, 7)						1 doublon G0			v
+combinaison : (0, 8)						1 doublon H0			v
+combinaison : (0, 9)						1 doublon I0			v
+combinaison : (0, 10)						1 doublon J0			v
+																													combinaison : (1, 0)						1 doublon A0
+combinaison : (1, 1)						0 doublon
+combinaison : (1, 2)						1 doublon A1			v
+combinaison : (1, 3)						1 doublon B			v
+combinaison : (1, 4)						1 doublon C			v
+combinaison : (1, 5)						1 doublon D			v
+combinaison : (1, 6)						1 doublon E			v
+combinaison : (1, 7)						1 doublon F			v
+combinaison : (1, 8)						1 doublon G			v
+combinaison : (1, 9)						1 doublon H			v
+combinaison : (1, 10)						1 doublon I1			v
+																													combinaison : (2, 0)						1 doublon B0
+																													combinaison : (2, 1)						1 doublon A1
+combinaison : (2, 2)						0 doublon
+combinaison : (2, 3)						1 doublon A2			v
+combinaison : (2, 4)						1 doublon B2			v
+combinaison : (2, 5)						1 doublon C2			v
+combinaison : (2, 6)						1 doublon D2			v
+combinaison : (2, 7)						1 doublon E2			v
+combinaison : (2, 8)						1 doublon F2			v
+combinaison : (2, 9)						1 doublon G2			v
+combinaison : (2, 10)						1 doublon H2			v
+																													combinaison : (3, 0)						1 doublon C0
+																													combinaison : (3, 1)						1 doublon B1
+																													combinaison : (3, 2)						1 doublon A2
+combinaison : (3, 3)						0 doublon
+combinaison : (3, 4)						1 doublon A3			v
+combinaison : (3, 5)						1 doublon B3			v
+combinaison : (3, 6)						1 doublon C3			v
+combinaison : (3, 7)						1 doublon D3			v
+combinaison : (3, 8)						1 doublon E3			v
+combinaison : (3, 9)						1 doublon F3			v
+combinaison : (3, 10)						1 doublon G3			v
+																													combinaison : (4, 0)						1 doublon D0
+																													combinaison : (4, 1)						1 doublon C1
+																													combinaison : (4, 2)						1 doublon B2
+																													combinaison : (4, 3)						1 doublon A3
+combinaison : (4, 4)						0 doublon
+combinaison : (4, 5)						1 doublon A4			v
+combinaison : (4, 6)						1 doublon B4			v
+combinaison : (4, 7)						1 doublon C4			v
+combinaison : (4, 8)						1 doublon D4			v
+combinaison : (4, 9)						1 doublon E4			v
+combinaison : (4, 10)						1 doublon F4			v
+																													combinaison : (5, 0)						1 doublon E0
+																													combinaison : (5, 1)						1 doublon D1
+																													combinaison : (5, 2)						1 doublon C2
+																													combinaison : (5, 3)						1 doublon B3
+																													combinaison : (5, 4)						1 doublon A4
+combinaison : (5, 5)						0 doublon
+combinaison : (5, 6)						1 doublon A5			v
+combinaison : (5, 7)						1 doublon B5			v
+combinaison : (5, 8)						1 doublon C5			v
+combinaison : (5, 9)						1 doublon D5			v
+combinaison : (5, 10)						1 doublon E5			v
+																													combinaison : (6, 0)						1 doublon F0
+																													combinaison : (6, 1)						1 doublon E1
+																													combinaison : (6, 2)						1 doublon D2
+																													combinaison : (6, 3)						1 doublon C3
+																													combinaison : (6, 4)						1 doublon B4
+																													combinaison : (6, 5)						1 doublon A5
+combinaison : (6, 6)						0 doublon
+combinaison : (6, 7)						1 doublon A6			v
+combinaison : (6, 8)						1 doublon B6			v
+combinaison : (6, 9)						1 doublon C6			v
+combinaison : (6, 10)						1 doublon D6			v
+																													combinaison : (7, 0)						1 doublon G0
+																													combinaison : (7, 1)						1 doublon F1
+																													combinaison : (7, 2)						1 doublon E2
+																													combinaison : (7, 3)						1 doublon D3
+																													combinaison : (7, 4)						1 doublon C4
+																													combinaison : (7, 5)						1 doublon B5
+																													combinaison : (7, 6)						1 doublon A6
+combinaison : (7, 7)						0 doublon
+combinaison : (7, 8)						1 doublon A7			v
+combinaison : (7, 9)						1 doublon B7			v
+combinaison : (7, 10)						1 doublon C7			v
+																													combinaison : (8, 0)						1 doublon H0
+																													combinaison : (8, 1)						1 doublon G1
+																													combinaison : (8, 2)						1 doublon F2
+																													combinaison : (8, 3)						1 doublon E3
+																													combinaison : (8, 4)						1 doublon D4
+																													combinaison : (8, 5)						1 doublon C5
+																													combinaison : (8, 6)						1 doublon B6
+																													combinaison : (8, 7)						1 doublon A7
+combinaison : (8, 8)						0 doublon
+combinaison : (8, 9)						1 doublon A8			v
+combinaison : (8, 10)						1 doublon B8			v
+																													combinaison : (9, 0)						1 doublon I0
+																													combinaison : (9, 1)						1 doublon G1
+																													combinaison : (9, 2)						1 doublon G2
+																													combinaison : (9, 3)						1 doublon F3
+																													combinaison : (9, 4)						1 doublon E4
+																													combinaison : (9, 5)						1 doublon D5
+																													combinaison : (9, 6)						1 doublon C6
+																													combinaison : (9, 7)						1 doublon B7
+																													combinaison : (9, 8)						1 doublon A8
+combinaison : (9, 9)						0 doublon
+combinaison : (9, 10)						1 doublon A9			v
+																													combinaison : (10, 0)						1 doublon J0
+																													combinaison : (10, 1)						1 doublon I1
+																													combinaison : (10, 2)						1 doublon H2
+																													combinaison : (10, 3)						1 doublon G3
+																													combinaison : (10, 4)						1 doublon F4
+																													combinaison : (10, 5)						1 doublon E5
+																													combinaison : (10, 6)						1 doublon D6
+																													combinaison : (10, 7)						1 doublon C7
+																													combinaison : (10, 8)						1 doublon B8
+																													combinaison : (10, 9)						1 doublon A9
+combinaison : (10, 10)					0 doublon

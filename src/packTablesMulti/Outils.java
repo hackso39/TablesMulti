@@ -41,6 +41,20 @@ public class Outils {
 		return lC;
 	}
 	
+	public List<Combinaisons> genererListeDeCombinaisonsSansDoublon(){
+		List<Combinaisons> lC = new ArrayList<Combinaisons>();
+		
+		for(int i = 0 ; i < nbr2 ; i++) {			//	i = 0
+			for(int j = i ; j < nbr2 ; j++) {		//	j = 0
+				Combinaisons c = new Combinaisons();	//	creation variable c
+				c.setNbr1(i);						//	nbr1 = 0
+				c.setNbr2(j);						//	nbr2 = 0
+				lC.add(c);							//	lC 
+			}
+		}
+		return lC;
+	}
+	
 	public static int getNbr1() {
 		return nbr1;
 	}
