@@ -1,5 +1,6 @@
 package packTablesMulti;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -13,7 +14,20 @@ public class Launcher {
 	public static void main(String[] args) {
 
 //		lanceur1(); // genererListeDeCombinaisons
-		lanceur2();
+//		lanceur2();
+		Lanceur3();
+	}
+
+	private static void Lanceur3() {
+		int nbr = 3;
+		List<Integer> lI = new ArrayList<Integer>();
+		Combinaisons c = new Combinaisons(3, 2);
+		Outils o = new Outils();
+		lI = o.questionChoixMultiples(c, nbr);
+		Collections.sort(lI);
+		for (Integer i : lI) {
+			System.out.println(i);
+		}
 	}
 
 	private static void lanceur2() {

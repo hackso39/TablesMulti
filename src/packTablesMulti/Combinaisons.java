@@ -8,6 +8,11 @@ public class Combinaisons {
 	public Combinaisons() {
 		super();
 	}
+	
+	public Combinaisons(int nbr1, int nbr2) {
+		this.nbr1 = nbr1;
+		this.nbr2 = nbr2;
+	}
 
 	public int getNbr1() {
 		return this.nbr1;

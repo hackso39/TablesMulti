@@ -68,6 +68,24 @@ public class Outils {
 		return lC;
 	}
 
+	public List<Integer> questionChoixMultiples(Combinaisons c, int nbr) {
+		nbr--;
+		List<Integer> listeNombres = new ArrayList<Integer>();
+		
+		int resultat = c.getNbr1() * c.getNbr2(); 
+		listeNombres.add(resultat);
+		int resultPlusMoinsUn = 0;
+		for(int i = 1 ; i < nbr + 1 ; i++) {
+			if(Math.random() < 0.5) {
+				resultPlusMoinsUn = Math.abs(resultat - i);
+			} else {
+				resultPlusMoinsUn = resultat + i;
+			}
+			listeNombres.add(resultPlusMoinsUn);
+		}
+		return listeNombres;
+	}
+	
 	public static int getNbr1() {
 		return nbr1;
 	}
