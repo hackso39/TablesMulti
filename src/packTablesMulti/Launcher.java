@@ -6,9 +6,10 @@ import java.util.Scanner;
 
 public class Launcher {
 
+	private final static int NBR_QUESTIONS = 3;
 	public static int compteurPoints = 0;
 	public static int nbrReponsesDonnees = 0;
-	private final static int NBR_QUESTIONS = 3;
+
 	public static void main(String[] args) {
 
 //		lanceur1(); // genererListeDeCombinaisons
@@ -18,14 +19,14 @@ public class Launcher {
 	private static void lanceur2() {
 
 		Outils outils = new Outils();
-		
 		Scanner sc = new Scanner(System.in);		
+
 		List<Combinaisons> lC = outils.genererListeDeCombinaisonsSansDoublon();
 		Collections.shuffle(lC); // Mélange des éléments de la liste
+
 		for(int i = 0 ; i < NBR_QUESTIONS ; i++) {
 			boolean reponseOk = false;
 			System.out.println("Quel est le résultat de : " + lC.get(i).getNbr1() + " x " + lC.get(i).getNbr2() + " ?");
-			    
 			    while(!reponseOk) {
 			    	while (!sc.hasNextInt()) {
 			    		sc.next();
