@@ -1,7 +1,10 @@
 package packTablesMulti;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Outils {
 	
@@ -92,13 +95,28 @@ public class Outils {
 		return lC;
 	}
 
+	public Map<Character, Integer> mapReponsesPossibles(Combinaisons c, int nbr) {
+		
+		List<Integer> reponsesPossibles = new ArrayList<Integer>();
+		Map<Character, Integer> mapChoixPossibles = new HashMap<Character, Integer>();
+		reponsesPossibles = questionChoixMultiples(c, nbr);
+		
+		final int A = 65;
+		
+		for(int i = 0 ; i < reponsesPossibles.size() ; i++) {
+			char caract = (char)(A + i);
+			mapChoixPossibles.put(caract, reponsesPossibles.get(i));
+		}
+		return mapChoixPossibles;
+	}
+	
 	/**
 	 * Cette méthode permet d'avoir pour une combinaison donnée (exemple : 3 x 5), un nombre 
 	 * de résultat possible suivant le paramètre : nbr. 
 	 * 
-	 * @param c
-	 * @param nbr
-	 * @return List<Integer>
+	 * @param c combinaison (Ex : 3 x 5)
+	 * @param nbr nombre de propositions
+	 * @return List<Integer> Liste de réponses possibles
 	 */
 	public List<Integer> questionChoixMultiples(Combinaisons c, int nbr) {
 		nbr--;
@@ -115,12 +133,11 @@ public class Outils {
 			}
 			listeNombres.add(resultPlusMoinsUn);
 		}
+		// On trie par ordre croissant la liste contenant les propositions
+		Collections.sort(listeNombres);
 		return listeNombres;
 	}
 	
-	/**
-	 * 
-	 */
 	
 	/**
 	 * getters qui retourne la valeur de NBR1
