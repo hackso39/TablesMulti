@@ -6,20 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Outils {
+public abstract class Outils {
 	
 	private static final int NBR1 = 0;
 	private static final int NBR2 = 11;
 
 //	private List<ArrayList<Integer>> listeDeListe = new ArrayList<ArrayList<Integer>>();
 //	private List<Integer> liste = new ArrayList<Integer>();
-	
-	/**
-	 * Constructeur
-	 */
-	public Outils() {
-		super();
-	}
 	
 //	public void genererNombresDansListe() {
 //		
@@ -38,7 +31,7 @@ public class Outils {
 	 * 
 	 * @return List<Combinaisons> contient la liste de toutes les combinaisons.
 	 */
-	public List<Combinaisons> genererListeDeCombinaisons(){
+	public static List<Combinaisons> genererListeDeCombinaisons(){
 		List<Combinaisons> lC = new ArrayList<Combinaisons>();
 		
 		for(int i = 0 ; i < NBR2 ; i++) {			//	i = 0
@@ -59,7 +52,7 @@ public class Outils {
 	 * 
 	 * @return List<Combinaisons> contient la liste de toutes les combinaisons.
 	 */
-	public List<Combinaisons> genererListeDeCombinaisonsSansDoublon(){
+	public static List<Combinaisons> genererListeDeCombinaisonsSansDoublon(){
 		List<Combinaisons> lC = new ArrayList<Combinaisons>();
 		
 		for(int i = 0 ; i < NBR2 ; i++) {			//	i = 0
@@ -83,7 +76,7 @@ public class Outils {
 	 * @return List<Combinaisons> contient la liste des combinaisons 
 	 * 		   permutées 
 	 */
-	private List<Combinaisons> permutationAleatoireNombres(List<Combinaisons> lC) {
+	private static List<Combinaisons> permutationAleatoireNombres(List<Combinaisons> lC) {
 		
 		for(int i = 0 ; i <lC.size() ; i++) {
 			if(Math.random() < 0.5) {
@@ -95,11 +88,10 @@ public class Outils {
 		return lC;
 	}
 
-	public Map<Character, Integer> mapReponsesPossibles(Combinaisons c, int nbr) {
+	public static Map<Character, Integer> mapReponsesPossibles(Combinaisons c, int nbr) {
 		
-		List<Integer> reponsesPossibles = new ArrayList<Integer>();
 		Map<Character, Integer> mapChoixPossibles = new HashMap<Character, Integer>();
-		reponsesPossibles = questionChoixMultiples(c, nbr);
+		List<Integer> reponsesPossibles = questionChoixMultiples(c, nbr);
 		
 		final int A = 65;
 		
@@ -118,7 +110,7 @@ public class Outils {
 	 * @param nbr nombre de propositions
 	 * @return List<Integer> Liste de réponses possibles
 	 */
-	public List<Integer> questionChoixMultiples(Combinaisons c, int nbr) {
+	public static List<Integer> questionChoixMultiples(Combinaisons c, int nbr) {
 		nbr--;
 		List<Integer> listeNombres = new ArrayList<Integer>();
 		
