@@ -10,22 +10,63 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Launcher {
-
-	private final static int MODE = 0;
+	
+	private final static int MODE = 1;
 	private final static int NBR_QUESTIONS = 3;
 	private final static int NBR_PROPOSITIONS = 3; // Minimum = 2
 	public static int compteurPoints = 0;
 	public static int nbrReponsesDonnees = 0;
-
+	
 	public static void main(String[] args) {
-
+		
 		// lanceur1(); // genererListeDeCombinaisons
 		// lanceur3();
-		lanceur4();
+		// lanceur4();
 		// lanceur5();
 		// lanceur6();
 		// lanceur7();
-		// lanceur8();
+		lanceur8();
+	}
+	@SuppressWarnings("unused")
+	private static void lanceur8() {
+
+		System.out.println("Bonjour Charlène !");
+		StrategyQuestion strategie;
+		if (MODE == 0) {
+			strategie = new StrategyQuestionValeur();
+		} else {
+			strategie = new StrategyQuestionChoix();
+		}
+		
+		fonctionnementDuJeu(strategie);
+	}
+
+	private static void fonctionnementDuJeu(StrategyQuestion strategie) {
+		Scanner sc = new Scanner(System.in);
+		
+		List<Combinaisons> lC = Outils.genererListeDeCombinaisonsSansDoublon();
+		Collections.shuffle(lC); // Mélange des éléments de la liste
+		for (int i = 0; i < NBR_QUESTIONS; i++) {
+			
+			Combinaisons combinaison = lC.get(i);
+			boolean reponseJuste;
+			
+			reponseJuste = strategie.poserQuestion(combinaison, NBR_QUESTIONS, sc, i);
+			
+			nbrReponsesDonnees++;
+			if (reponseJuste) {
+				compteurPoints++;
+			}
+		}
+		
+		System.out.println("");
+		System.out.println("--------------- Résulats : -------------------");
+		
+		strategie.afficherMode();
+		
+		System.out.println("Nombre de réponses données : " + nbrReponsesDonnees + " sur : " + NBR_QUESTIONS
+				+ " questions posées, soit : " + (nbrReponsesDonnees - compteurPoints) + " mauvaise(s) réponse(s).");
+		// afficherCombinaison(lC);
 	}
 
 	@SuppressWarnings("unused")
@@ -107,47 +148,6 @@ public class Launcher {
 
 	}
 
-	@SuppressWarnings("unused")
-	private static void lanceur8() {
-		System.out.println("Bonjour Charlène !");
-		StrategyQuestion strategie;
-		if (MODE == 0) {
-			strategie = new StrategyQuestionValeur();
-		} else {
-			strategie = new StrategyQuestionChoix();
-		}
-
-		fonctionnementDuJeu(strategie);
-
-	}
-
-	private static void fonctionnementDuJeu(StrategyQuestion strategie) {
-		Scanner sc = new Scanner(System.in);
-
-		List<Combinaisons> lC = Outils.genererListeDeCombinaisonsSansDoublon();
-		Collections.shuffle(lC); // Mélange des éléments de la liste
-		for (int i = 0; i < NBR_QUESTIONS; i++) {
-
-			Combinaisons combinaison = lC.get(i);
-			boolean reponseJuste;
-
-			reponseJuste = strategie.poserQuestion(combinaison, NBR_QUESTIONS, sc, i);
-
-			nbrReponsesDonnees++;
-			if (reponseJuste) {
-				compteurPoints++;
-			}
-		}
-
-		System.out.println("");
-		System.out.println("--------------- Résulats : -------------------");
-
-		strategie.afficherMode();
-
-		System.out.println("Nombre de réponses données : " + nbrReponsesDonnees + " sur : " + NBR_QUESTIONS
-				+ " questions posées, soit : " + (nbrReponsesDonnees - compteurPoints) + " mauvaise(s) réponse(s).");
-		// afficherCombinaison(lC);
-	}
 
 	private static void lanceur6() {
 

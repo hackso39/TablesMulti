@@ -22,7 +22,12 @@ public class StrategyQuestionChoix extends StrategyQuestion {
 		System.out.println(reponsesPossibles.entrySet());
 		// }
 		System.out.println("Quelle est la bonne réponse ?");
-
+		
+		// a revoir !
+//		while (!reponsesPossibles.containsKey(sc.next().charAt(0))) {
+//			sc.next();
+//		}
+		
 		char reponse = sc.next().charAt(0);
 		if (reponsesPossibles.get(Character.toUpperCase(reponse)) == (combinaison.getNbr1() * combinaison.getNbr2())) {
 			System.out.println("BRAVO ! C'est la bonne réponse !!!");

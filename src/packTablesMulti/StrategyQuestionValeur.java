@@ -30,6 +30,6 @@ public class StrategyQuestionValeur extends StrategyQuestion {
 
 	@Override
 	public void afficherMode() {
-		System.out.println("Vous avez joué avec le jeux VALEUR");
+		System.out.println("Vous avez joué avec le jeux Question / Valeur");
 	}
 }
